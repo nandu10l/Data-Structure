@@ -19,28 +19,28 @@ struct node *start;
 int main(){
     int option,value,position;
     do{
-        printf("\n\nPlease Enter your Option\n\n");
         printf("1.Enter in first position\n2.Enter in end position\n3.Enter in particular position\n4.Delete in First position\n5.Delete in end position\n6.Delete in particular position\n7.Display\n8.Exit\n");
+        printf("\nPLEASE ENTER YOUR OPTION:\n");
         scanf("%d",&option);
 
         switch (option){
             case 1:
-                printf("Enter the data\n");
-                scanf("%d",&value);
+                printf("Enter the data:");
+                scanf("\n%d",&value);
                 inputFirst(value);
                 display();
                 break;
             case 2:
-                printf("Enter the data\n");
-                scanf("%d",&value);
+                printf("Enter the data:");
+                scanf("\n %d",&value);
                 inputEnd(value);
                 display();
                 break;
             case 3:
-                printf("Enter the data\n");
-                scanf("%d",&value);
-                printf("Enter the position\n");
-                scanf("%d",&position);
+                printf("Enter the data:");
+                scanf("\n %d",&value);
+                printf("Enter the position:");
+                scanf("\n %d",&position);
                 inputParticular(value,position);
                 display();
                 break;
@@ -53,8 +53,8 @@ int main(){
                 display();
                 break;
             case 6:
-            	printf("Enter the position\n");
-            	scanf("%d",&position);
+            	printf("Enter the position:");
+            	scanf("\n%d",&position);
             	deleteParticular(position);
             	display();
             	break;
@@ -64,7 +64,7 @@ int main(){
             default:
                 printf("Thank u");
         }
-        printf("\n________________________________________________\n");
+        printf("\n________________________\n");
 
     }while(option!=8);
     return 0;
@@ -203,7 +203,7 @@ void deleteParticular(int position){
 }
 void display(){
     struct node *temp;
-    printf("\n\nYour linked list :-\n");
+    printf("\nYour linked list :-\n");
     if(start==NULL){
         printf("List is empty");
     }
